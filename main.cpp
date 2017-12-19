@@ -1,4 +1,5 @@
-# max_in_array-0.0.3
+#array@0.0.3
+
 #include <iostream>
 #include <sstream>
 
