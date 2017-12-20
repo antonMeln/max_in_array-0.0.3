@@ -1,4 +1,4 @@
-#array@0.0.3
+
 
 #include <iostream>
 #include <sstream>
@@ -14,7 +14,11 @@ using namespace std;
    
    bool f = true;
    for (i = 0;i<10;i++){
-   if (!(stream >> mas[i])) {f = false; break;}
+        if (!(stream >> mas[i])) {
+          f = false;
+          break;
+          
+        }
    }
    return f;
  }
@@ -23,17 +27,20 @@ using namespace std;
  {
    int a[10],b[10];
    int max;
-   if ((read(a)) && (read(b))) {
-     max=a[0]+b[0];
-     for (int i =0;i<10;i++){
-     for (int j = 0;j<10;j++){
-       if ((a[i]+b[j] > max) && (i<=j)) {max = a[i]+b[j];}
-     }
+  
+   if (read(a) && read(b)) {
+         max=a[0]+b[0];
+         for (int i =0;i<10;i++){
+                for (int j = 0;j<10;j++){
+                      if (i<=j && a[i]+b[j] > max ) {
+                        max = a[i]+b[j];
+                        
+                      }
+                }
        
-     } cout << max;
+          } cout << max;
    } 
-   else cout << "An error has occurred while reading numbers";
+   else  cout << "An error has occurred while reading numbers";
    return 0;
-   
    
  }
